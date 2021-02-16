@@ -1,0 +1,54 @@
+.tab__list__item {
+	margin-right: 2rem;
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 123%;
+	width: 113px;
+	text-align: center;
+	letter-spacing: 0.02em;
+	color: #9a9cb5;
+	position: relative;
+	padding-bottom: 0.5rem;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+
+.tab__list__item a:link,
+.tab__list__item a:visited,
+.tab__list__item a:hover,
+.tab__list__item a:active {
+	text-decoration: none;
+	color: #9a9cb5;
+	display: block;
+}
+
+.tab__list__item--active {
+	color: #3843d0;
+}
+
+.tab__list__item--active a:link,
+.tab__list__item--active a:visited,
+.tab__list__item--active a:hover,
+.tab__list__item--active a:active {
+	text-decoration: none;
+	color: #3843d0;
+}
+
+.tab__list__item--active::after {
+	content: '';
+	position: absolute;
+	background: #3843d0;
+	height: 2px;
+	width: 100%;
+	top: 100%;
+	left: 0;
+}
+
+.tab__list__item:last-child {
+	margin-right: 0;
+}

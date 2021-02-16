@@ -1,5 +1,5 @@
 import React from 'react';
-import QuestionsPanel from './QuestionsPanel';
+import QuestionsPanel from '../shared/QuestionsPanel';
 
 const PopularQuestions = () => {
 	return <QuestionsPanel type='popular' />;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import QuestionsPanel from './QuestionsPanel';
+import QuestionsPanel from '../shared/QuestionsPanel';
 
 const NewQuestions = () => {
 	return <QuestionsPanel type='new' />;
