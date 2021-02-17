@@ -1,0 +1,30 @@
+.custom__btn {
+	background: #3843d0;
+	border: 3px solid #212b80;
+	box-sizing: border-box;
+	box-shadow: 0px 2px 0px #212b80;
+	border-radius: 10px;
+	font-family: 'Poppins', sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	letter-spacing: 0.02em;
+	color: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	padding: 10px 24px;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+
+.custom__btn:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}

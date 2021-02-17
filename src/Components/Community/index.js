@@ -8,6 +8,7 @@ import NewQuestions from './NewQuestions';
 import PopularQuestions from './PopularQuestions';
 
 import './community-section.css';
+import CommunityHeader from './CommunityHeader';
 
 const RouterLink = <Link to='/' />;
 
@@ -15,6 +16,7 @@ const Community = () => {
 	const locationObj = useLocation();
 	return (
 		<section className='community__section'>
+			<CommunityHeader />
 			<Tabs value={locationObj?.pathname}>
 				<Tab label='POPULAR' component={RouterLink} to='/' />
 				<Tab label='NEW' component={RouterLink} to='/new' />
