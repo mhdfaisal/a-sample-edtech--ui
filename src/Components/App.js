@@ -4,8 +4,10 @@ import AskQuestion from './AskQuestion';
 
 import Community from './Community';
 import PageNotFound from './PageNotFound';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 const App = () => {
+	const [storedItem, setValueInLS] = useLocalStorage('lucaQuestions');
 	return (
 		<Switch>
 			<Route path='/ask' exact>
