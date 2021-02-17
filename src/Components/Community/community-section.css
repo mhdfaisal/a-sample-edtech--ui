@@ -3,9 +3,21 @@
 	margin: 0 auto;
 }
 
+.community__section__float-btn {
+	display: none;
+	position: fixed;
+	bottom: 24px;
+	right: 16px;
+	z-index: 1;
+}
+
 @media screen and (max-width: 767px) {
 	.community__section {
 		width: 100%;
 		padding: 0 16px 16px 16px;
+		background: #fff;
+	}
+	.community__section__float-btn {
+		display: block;
 	}
 }

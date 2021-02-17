@@ -1,0 +1,23 @@
+.rounded__icon__btn {
+	width: 56px;
+	height: 56px;
+	left: 342px;
+	top: 710px;
+	background: #3843d0;
+	box-shadow: 0px 2px 0px #212b80;
+	border-radius: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	outline: none;
+	border: none;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+
+.rounded__icon__btn:hover {
+	opacity: 0.8;
+}
