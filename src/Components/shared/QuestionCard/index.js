@@ -7,28 +7,39 @@ import StarNonRated from '../../../assets/images/non-rated-star.png';
 import ThumbsUp from '../../../assets/images/thumbs-up.png';
 import ThumbsDown from '../../../assets/images/thumbs-down.png';
 import Share from '../../../assets/images/share-2.png';
+import stringHelpers from '../../../utils/string-helpers';
 
 import './style.css';
 
-const QuestionCard = () => {
+const QuestionCard = ({ questionItem }) => {
+	const {
+		name,
+		question,
+		comments_count,
+		description,
+		disliked,
+		favorite,
+		id,
+		liked,
+		thread,
+		group,
+	} = questionItem;
 	return (
 		<div className='question__card'>
 			<div className='question__card__content'>
 				<div className='question__card__avatar'>
 					<Avatar
 						color={Avatar.getRandomColor('sitebase', ['red', 'green', 'blue'])}
-						name='Wim Mostmans'
+						name={name}
 						size='56'
 						round
 					/>
 				</div>
 				<div className='question__card__body'>
 					<div>
-						<h3 className='question__card__heading'>
-							¿Cuáles son los múltiplos del 7?
-						</h3>
+						<h3 className='question__card__heading'>{question}</h3>
 						<p className='question__card__description'>
-							La verdad no me queda muy claro cuáles son los múltiplos del 7 porque...
+							{stringHelpers.getTrimmedString(description)}
 						</p>
 					</div>
 				</div>
@@ -38,7 +49,7 @@ const QuestionCard = () => {
 						alt='messages'
 						className='question__card__comment_image'
 					/>
-					<span className='question__card__comment_count'>72</span>
+					<span className='question__card__comment_count'>{comments_count}</span>
 				</div>
 			</div>
 			<div className='question__card__footer'>
@@ -48,13 +59,17 @@ const QuestionCard = () => {
 				</div>
 				<div className='question__card__posted-by'>
 					<span>
-						Pregunta juan.c23 en{' '}
-						<span className='question__card__subject'>Matemáticas 6º</span>
+						{thread} {` `}
+						<span className='question__card__subject'>{group}</span>
 					</span>
 				</div>
 				<div className='question__card__social'>
 					<img src={Share} alt='share' className='question__card__share' />
-					<img src={StarRated} alt='favorite' className='question__card__favorite' />
+					<img
+						src={favorite ? StarRated : StarNonRated}
+						alt='favorite'
+						className='question__card__favorite'
+					/>
 				</div>
 			</div>
 		</div>

@@ -9,7 +9,6 @@ import PopularQuestions from './PopularQuestions';
 
 import './community-section.css';
 import CommunityHeader from './CommunityHeader';
-import PageNotFound from '../PageNotFound';
 
 const RouterLink = <Link to='/' />;
 

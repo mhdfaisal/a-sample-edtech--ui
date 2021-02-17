@@ -7,6 +7,7 @@ import Community from './Community';
 import PageNotFound from './PageNotFound';
 import useLocalStorage from '../hooks/useLocalStorage';
 import { DUMMY_API_BASE_URL } from '../utils/api-constants';
+import { AppContext } from '../Components/Context/AppContext';
 
 const App = () => {
 	const [storedItem, setValueInLS] = useLocalStorage('lucaQuestions');
@@ -17,39 +18,51 @@ const App = () => {
 	console.log(storedItem);
 
 	const fetchQuestionFromAPI = async () => {
-		try {
+		if (!storedItem) {
 			setIsLoading(true);
 			setSuccess(false);
-			const result = await axios.get(`${DUMMY_API_BASE_URL}/db`);
-			const data = await result?.data;
-			console.log(data);
-			setValueInLS(data);
-		} catch (err) {
-			setIsLoading(false);
-			setErrorMsg(err.message);
-			setSuccess(false);
-			console.log(err);
+			try {
+				const result = await axios.get(`${DUMMY_API_BASE_URL}/db`);
+				const data = await result?.data;
+				console.log(data);
+				setValueInLS(data);
+				setIsLoading(false);
+				setSuccess(true);
+			} catch (err) {
+				setIsLoading(false);
+				setErrorMsg(err.message);
+				setSuccess(false);
+				console.log(err);
+			}
 		}
 	};
 
 	useEffect(() => {
-		if (!storedItem) {
-			fetchQuestionFromAPI();
-		}
-	}, []);
+		fetchQuestionFromAPI();
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return (
-		<Switch>
-			<Route path='/ask' exact>
-				<AskQuestion />
-			</Route>
-			<Route path='/notfound' exact>
-				<PageNotFound />
-			</Route>
-			<Route path='/'>
-				<Community />
-			</Route>
-		</Switch>
+		<AppContext.Provider
+			value={{
+				storedItem,
+				setValueInLS,
+				isLoading,
+				success,
+				errorMsg,
+			}}
+		>
+			<Switch>
+				<Route path='/ask' exact>
+					<AskQuestion />
+				</Route>
+				<Route path='/notfound' exact>
+					<PageNotFound />
+				</Route>
+				<Route path='/'>
+					<Community />
+				</Route>
+			</Switch>
+		</AppContext.Provider>
 	);
 };
 
