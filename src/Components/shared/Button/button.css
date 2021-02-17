@@ -17,6 +17,7 @@
 	align-items: center;
 	text-transform: uppercase;
 	padding: 10px 24px;
+	outline: none;
 	transition: all 0.4s;
 	-webkit-transition: all 0.4s;
 	-moz-transition: all 0.4s;

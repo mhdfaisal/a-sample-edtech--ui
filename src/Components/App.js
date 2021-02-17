@@ -15,8 +15,6 @@ const App = () => {
 	const [errorMsg, setErrorMsg] = useState(null);
 	const [success, setSuccess] = useState(true);
 
-	console.log(storedItem);
-
 	const fetchQuestionFromAPI = async () => {
 		if (!storedItem) {
 			setIsLoading(true);

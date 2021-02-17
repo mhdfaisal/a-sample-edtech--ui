@@ -59,12 +59,21 @@ const QuestionCard = ({ questionItem }) => {
 				</div>
 				<div className='question__card__posted-by'>
 					<span>
+						<span className='question__card__posted-by-label'>Pregunta</span>
 						{thread} {` `}
 						<span className='question__card__subject'>{group}</span>
 					</span>
 				</div>
 				<div className='question__card__social'>
 					<img src={Share} alt='share' className='question__card__share' />
+					<div className='question__card__comment--small'>
+						<img
+							src={MessageCircleImage}
+							alt='messages'
+							className='question__card__comment_image'
+						/>
+						<span className='question__card__comment_count'>{comments_count}</span>
+					</div>
 					<img
 						src={favorite ? StarRated : StarNonRated}
 						alt='favorite'

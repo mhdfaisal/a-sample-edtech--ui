@@ -48,25 +48,27 @@ const AskQuestion = () => {
 
 	const onFormSubmit = (e) => {
 		e.preventDefault();
-		let newItems = storedItem?.new ?? [];
-		let popularItems = storedItem?.popular ?? [];
-		const newQuestion = {
-			id: new Date().getTime(),
-			name: 'Test User',
-			question: formState?.inputs?.title?.value,
-			description: formState?.inputs?.description?.value,
-			comments_count: Math.floor(Math.random() * 200) + 1,
-			disliked: !!Math.floor(Math.random() * Math.floor(5)),
-			favorite: !!Math.floor(Math.random() * Math.floor(5)),
-			group: 'Matemáticas 6º',
-			thread: 'Pregunta juan.c23 en',
-			liked: !!Math.floor(Math.random() * Math.floor(5)),
-			createdAt: new Date(),
-		};
-		newItems = [{ ...newQuestion }, ...newItems];
-		popularItems = [{ ...newQuestion }, ...popularItems];
-		setValueInLS({ ...storedItem, new: newItems, popular: popularItems });
-		history.push('/');
+		if (formState.isValidForm) {
+			let newItems = storedItem?.new ?? [];
+			let popularItems = storedItem?.popular ?? [];
+			const newQuestion = {
+				id: new Date().getTime(),
+				name: 'Test User',
+				question: formState?.inputs?.title?.value,
+				description: formState?.inputs?.description?.value,
+				comments_count: Math.floor(Math.random() * 200) + 1,
+				disliked: !!Math.floor(Math.random() * Math.floor(5)),
+				favorite: !!Math.floor(Math.random() * Math.floor(5)),
+				group: 'Matemáticas 6º',
+				thread: 'Pregunta juan.c23 en',
+				liked: !!Math.floor(Math.random() * Math.floor(5)),
+				createdAt: new Date(),
+			};
+			newItems = [{ ...newQuestion }, ...newItems];
+			popularItems = [{ ...newQuestion }, ...popularItems];
+			setValueInLS({ ...storedItem, new: newItems, popular: popularItems });
+			history.push('/');
+		}
 	};
 	return (
 		<section className='ask__question'>

@@ -52,3 +52,11 @@
 .tab__list__item:last-child {
 	margin-right: 0;
 }
+
+@media screen and (max-width: 767px) {
+	.tab__list__item {
+		font-size: 15px;
+		line-height: 16px;
+		letter-spacing: 0.02em;
+	}
+}
