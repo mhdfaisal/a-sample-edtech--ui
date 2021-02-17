@@ -8,7 +8,7 @@ const useLocalStorage = (key = null) => {
 				return JSON.parse(item);
 			}
 		}
-		return {};
+		return null;
 	});
 
 	const setValueInLS = (value) => {
