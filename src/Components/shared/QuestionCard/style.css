@@ -3,6 +3,7 @@
 	padding: 1.5rem 1.5rem 1.5rem 0.5rem;
 	background: rgba(255, 255, 255, 0.2);
 	border-top: 0.0625rem solid #dbdbdb;
+	user-select: none;
 }
 
 .question__card__content {
