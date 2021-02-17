@@ -1,0 +1,109 @@
+.question__card {
+	width: 100%;
+	padding: 1.5rem 1.5rem 1.5rem 0.5rem;
+	background: rgba(255, 255, 255, 0.2);
+	border-top: 0.0625rem solid #dbdbdb;
+}
+
+.question__card__content {
+	display: flex;
+}
+
+.question__card__avatar {
+	margin-right: 2rem;
+}
+
+.question__card__body {
+	flex: 1;
+}
+
+.question__card__body .question__card__heading {
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 1rem;
+	line-height: 1rem;
+	color: #4f4f4f;
+	margin-bottom: 0.5rem;
+}
+
+.question__card__body .question__card__description {
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 0.8125rem;
+	line-height: 1.5rem;
+	color: #828282;
+	opacity: 0.7;
+}
+
+.question__card__comment {
+	display: flex;
+	align-self: flex-start;
+	justify-content: center;
+	align-items: center;
+}
+
+.question__card__comment .question__card__comment_image {
+	align-self: center;
+	margin-right: 0.4375rem;
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+.question__card__comment .question__card__comment_count {
+	align-self: center;
+	font-family: 'Poppins', sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 0.875rem;
+	line-height: 1.5rem;
+	color: #9a9cb5;
+}
+
+.question__card__footer {
+	display: flex;
+	margin-left: 5.5rem;
+}
+
+.question__card__footer .question__card__feedback {
+	margin-right: 2.125rem;
+}
+
+.question__card__footer .question__card__like-img {
+	margin-right: 1rem;
+}
+
+.question__card__footer .question__card__like-img,
+.question__card__footer .question__card__dislike-img,
+.question__card__footer .question__card__share,
+.question__card__footer .question__card__favorite {
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+.question__card__footer .question__card__posted-by {
+	display: flex;
+	align-items: flex-start;
+	font-family: Inter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 24px;
+	color: #828282;
+	flex: 1;
+}
+
+.question__card__subject {
+	color: #3843d0;
+	font-weight: bold;
+}
+
+.question__card__footer .question__card__social {
+	display: flex;
+	align-self: flex-start;
+}
+
+.question__card__footer .question__card__social .question__card__share {
+	margin-right: 24px;
+}
