@@ -9,6 +9,7 @@ export const TEXT_INPUT_INIT_STATE = {
 	},
 	isValid: false,
 	touched: false,
+	placeholder: '',
 };
 
 export const INPUT_ACTION_TYPES = {

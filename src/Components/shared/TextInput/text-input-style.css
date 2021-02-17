@@ -1,0 +1,28 @@
+.text__input__control {
+	font-family: 'Poppins', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 18px;
+	width: 100%;
+	height: 48px;
+	left: 288px;
+	top: 146px;
+	background: #ffffff;
+	border: 2px solid rgba(38, 38, 38, 0.25);
+	box-sizing: border-box;
+	border-radius: 12px;
+	padding: 15px 15px 15px 16px;
+	outline: none;
+}
+
+.text__input__label-text {
+	font-family: 'Poppins', sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 16px;
+	color: #565656;
+	margin-bottom: 0.5rem;
+	display: flex;
+}

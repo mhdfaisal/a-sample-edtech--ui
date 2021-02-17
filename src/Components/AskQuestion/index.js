@@ -8,7 +8,11 @@ import useInputHook, { TEXT_INPUT_INIT_STATE } from '../../hooks/useInputHook';
 import './ask-question-style.css';
 
 const AskQuestion = () => {
-	const [inputState, onInputChange] = useInputHook({ ...TEXT_INPUT_INIT_STATE });
+	const [inputState, onInputChange] = useInputHook({
+		...TEXT_INPUT_INIT_STATE,
+		label: 'Título de publicación',
+		placeholder: 'Escribe tu título aquí',
+	});
 	const history = useHistory();
 
 	const onCancelBtnClick = () => {
