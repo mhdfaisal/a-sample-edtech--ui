@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation, Link, Switch, Route } from 'react-router-dom';
+import { useLocation, Link, Switch, Route, Redirect } from 'react-router-dom';
 
 import Tabs from '../shared/Tabs';
 import Tab from '../shared/Tabs/Tab';
@@ -9,6 +9,7 @@ import PopularQuestions from './PopularQuestions';
 
 import './community-section.css';
 import CommunityHeader from './CommunityHeader';
+import PageNotFound from '../PageNotFound';
 
 const RouterLink = <Link to='/' />;
 
@@ -31,6 +32,9 @@ const Community = () => {
 				</Route>
 				<Route path='/followed' exact>
 					<FollowedQuestions />
+				</Route>
+				<Route path='*'>
+					<Redirect to='/notfound' />
 				</Route>
 			</Switch>
 		</section>
