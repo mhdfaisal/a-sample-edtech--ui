@@ -12,6 +12,7 @@ const TextInput = (props) => {
 		touched,
 		placeholder,
 		isMultiLine = false,
+		name,
 	} = props;
 
 	return (
@@ -26,6 +27,7 @@ const TextInput = (props) => {
 						onChange={onChange}
 						className='text__input__control'
 						placeholder={placeholder}
+						name={name}
 					/>
 				) : (
 					<textarea
@@ -35,6 +37,7 @@ const TextInput = (props) => {
 						onChange={onChange}
 						className='text__input__control-multiline'
 						placeholder={placeholder}
+						name={name}
 					>
 						{value}
 					</textarea>

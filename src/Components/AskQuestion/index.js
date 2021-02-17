@@ -3,15 +3,36 @@ import { useHistory } from 'react-router-dom';
 
 import Button from '../shared/Button';
 import TextInput from '../shared/TextInput';
-import useInputHook, { TEXT_INPUT_INIT_STATE } from '../../hooks/useInputHook';
+import useFormHook from '../../hooks/useFormHook';
 
 import './ask-question-style.css';
 
 const AskQuestion = () => {
-	const [inputState, onInputChange] = useInputHook({
-		...TEXT_INPUT_INIT_STATE,
-		label: 'Título de publicación',
-		placeholder: 'Escribe tu título aquí',
+	const { formState, onInputChange } = useFormHook({
+		title: {
+			name: 'title',
+			value: '',
+			errorMsg: '',
+			validationRules: {
+				isRequired: true,
+			},
+			isValid: false,
+			touched: false,
+			label: 'Título de publicación',
+			placeholder: 'Escribe tu título aquí',
+		},
+		publication: {
+			name: 'publication',
+			value: '',
+			errorMsg: '',
+			validationRules: {
+				isRequired: true,
+			},
+			isValid: false,
+			touched: false,
+			label: 'Publicación',
+			placeholder: 'Escribe tu publicación aquí',
+		},
 	});
 
 	const history = useHistory();
@@ -28,8 +49,8 @@ const AskQuestion = () => {
 				</div>
 			</header>
 			<form className='ask__question__form'>
-				<TextInput {...inputState} onChange={onInputChange} isMultiLine />
-				<TextInput {...inputState} onChange={onInputChange} />
+				<TextInput {...formState.title} onChange={onInputChange} isMultiLine />
+				<TextInput {...formState.publication} onChange={onInputChange} />
 			</form>
 		</section>
 	);
