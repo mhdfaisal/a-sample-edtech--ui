@@ -1,4 +1,6 @@
-import { useReducer, useState } from 'react';
+import { useReducer } from 'react';
+
+import validate from '../utils/validate';
 
 export const FORM_ACTION_TYPES = {
 	INPUT_VALUE_CHANGE: 'input_value_change',
@@ -11,7 +13,25 @@ const formReducer = (state = {}, action) => {
 			const { event } = payload;
 			const inputName = event.target.name;
 			const value = event.target.value;
-			return { ...state, [inputName]: { ...state[inputName], value } };
+			const validationRules = state.inputs[inputName]?.validationRules ?? {};
+			const isValid = validate(value, validationRules);
+			let formIsValid = true;
+			// validate overall form validity
+			for (let input in state.inputs) {
+				if (input === inputName) {
+					formIsValid = formIsValid && isValid;
+				} else {
+					formIsValid = formIsValid && state.inputs[input].isValid;
+				}
+			}
+			return {
+				...state,
+				inputs: {
+					...state.inputs,
+					[inputName]: { ...state.inputs[inputName], value, isValid, touched: true },
+				},
+				isValidForm: formIsValid,
+			};
 		}
 		default:
 			return state;
@@ -19,7 +39,6 @@ const formReducer = (state = {}, action) => {
 };
 
 const useFormHook = (initialState) => {
-	const [isValidForm, setIsValidForm] = useState(false);
 	const [formState, setFormState] = useReducer(formReducer, {
 		...initialState,
 	});
@@ -28,7 +47,7 @@ const useFormHook = (initialState) => {
 		setFormState({ type: FORM_ACTION_TYPES.INPUT_VALUE_CHANGE, payload: { event: e } });
 	};
 
-	return { formState, setFormState, onInputChange, isValidForm };
+	return { formState, setFormState, onInputChange };
 };
 
 export default useFormHook;

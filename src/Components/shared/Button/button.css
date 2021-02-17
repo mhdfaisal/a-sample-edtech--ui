@@ -24,7 +24,16 @@
 	-o-transition: all 0.4s;
 }
 
+.custom__btn--disabled {
+	opacity: 0.5;
+}
+
 .custom__btn:hover {
 	opacity: 0.8;
 	cursor: pointer;
+}
+
+.custom__btn--disabled:hover {
+	cursor: not-allowed;
+	opacity: 0.5;
 }

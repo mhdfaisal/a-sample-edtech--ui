@@ -11,30 +11,33 @@ import './ask-question-style.css';
 const AskQuestion = () => {
 	const { storedItem, setValueInLS } = useContext(AppContext);
 	const { formState, onInputChange } = useFormHook({
-		title: {
-			name: 'title',
-			value: '',
-			errorMsg: '',
-			validationRules: {
-				isRequired: true,
+		inputs: {
+			title: {
+				name: 'title',
+				value: '',
+				errorMsg: '',
+				validationRules: {
+					required: true,
+				},
+				isValid: false,
+				touched: false,
+				label: 'Título de publicación',
+				placeholder: 'Escribe tu título aquí',
 			},
-			isValid: false,
-			touched: false,
-			label: 'Título de publicación',
-			placeholder: 'Escribe tu título aquí',
-		},
-		description: {
-			name: 'description',
-			value: '',
-			errorMsg: '',
-			validationRules: {
-				isRequired: true,
+			description: {
+				name: 'description',
+				value: '',
+				errorMsg: '',
+				validationRules: {
+					required: true,
+				},
+				isValid: false,
+				touched: false,
+				label: 'Publicación',
+				placeholder: 'Escribe tu publicación aquí',
 			},
-			isValid: false,
-			touched: false,
-			label: 'Publicación',
-			placeholder: 'Escribe tu publicación aquí',
 		},
+		isValidForm: false,
 	});
 
 	const history = useHistory();
@@ -50,8 +53,8 @@ const AskQuestion = () => {
 		const newQuestion = {
 			id: new Date().getTime(),
 			name: 'Test User',
-			question: formState?.title?.value,
-			description: formState?.description?.value,
+			question: formState?.inputs?.title?.value,
+			description: formState?.inputs?.description?.value,
 			comments_count: Math.floor(Math.random() * 200) + 1,
 			disliked: !!Math.floor(Math.random() * Math.floor(5)),
 			favorite: !!Math.floor(Math.random() * Math.floor(5)),
@@ -65,7 +68,6 @@ const AskQuestion = () => {
 		setValueInLS({ ...storedItem, new: newItems, popular: popularItems });
 		history.push('/');
 	};
-
 	return (
 		<section className='ask__question'>
 			<header className='ask__question__header'>
@@ -76,13 +78,15 @@ const AskQuestion = () => {
 			</header>
 			<form className='ask__question__form' onSubmit={onFormSubmit}>
 				<div className='ask__question__form-field'>
-					<TextInput {...formState.title} onChange={onInputChange} isMultiLine />
+					<TextInput {...formState.inputs.title} onChange={onInputChange} isMultiLine />
 				</div>
 				<div className='ask__question__form-field'>
-					<TextInput {...formState.description} onChange={onInputChange} />
+					<TextInput {...formState.inputs.description} onChange={onInputChange} />
 				</div>
 				<div className='ask__question__form-button'>
-					<Button type='submit'>publicar</Button>
+					<Button type='submit' disabled={!formState.isValidForm}>
+						publicar
+					</Button>
 				</div>
 			</form>
 		</section>
