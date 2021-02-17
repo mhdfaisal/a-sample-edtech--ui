@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 import Button from '../shared/Button';
 import TextInput from '../shared/TextInput';
 import useFormHook from '../../hooks/useFormHook';
 import { AppContext } from '../Context/AppContext';
+import CloseIcon from '../../assets/images/ic_close_32.png';
 
 import './ask-question-style.css';
 
@@ -60,7 +61,7 @@ const AskQuestion = () => {
 				disliked: !!Math.floor(Math.random() * Math.floor(5)),
 				favorite: !!Math.floor(Math.random() * Math.floor(5)),
 				group: 'Matemáticas 6º',
-				thread: 'Pregunta juan.c23 en',
+				thread: 'juan.c23 en',
 				liked: !!Math.floor(Math.random() * Math.floor(5)),
 				createdAt: new Date(),
 			};
@@ -74,8 +75,15 @@ const AskQuestion = () => {
 		<section className='ask__question'>
 			<header className='ask__question__header'>
 				<h2 className='ask__question__title'>Haz una pregunta</h2>
-				<div>
-					<Button onClick={onCancelBtnClick}>cancelar</Button>
+				<div className='ask__question__cancel-btn'>
+					<span className='ask__question__cancel-btn-big'>
+						<Button onClick={onCancelBtnClick}>cancelar</Button>
+					</span>
+					<span className='ask__question__cancel-btn-small'>
+						<Link to='/'>
+							<img src={CloseIcon} alt='close-icon' />
+						</Link>
+					</span>
 				</div>
 			</header>
 			<form className='ask__question__form' onSubmit={onFormSubmit}>

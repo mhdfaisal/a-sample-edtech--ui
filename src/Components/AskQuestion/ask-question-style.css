@@ -29,3 +29,30 @@
 	display: flex;
 	justify-content: flex-end;
 }
+
+.ask__question__cancel-btn-small {
+	display: none;
+}
+
+@media screen and (max-width: 767px) {
+	.ask__question {
+		width: 100%;
+		padding: 1rem;
+	}
+
+	.ask__question__header {
+		margin-bottom: 56px;
+	}
+
+	.ask__question__cancel-btn-big {
+		display: none;
+	}
+
+	.ask__question__cancel-btn-small {
+		display: flex;
+	}
+
+	.ask__question__form-button .custom__btn {
+		width: 100%;
+	}
+}
