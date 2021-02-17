@@ -1,0 +1,7 @@
+.spinner__loader {
+	display: flex;
+	height: 100%;
+	align-self: stretch;
+	justify-content: center;
+	align-items: center;
+}
