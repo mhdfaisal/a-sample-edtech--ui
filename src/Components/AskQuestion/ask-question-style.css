@@ -1,4 +1,31 @@
+.ask__question__header {
+	display: flex;
+	margin-bottom: 50px;
+	justify-content: space-between;
+	margin-top: 38px;
+}
+
+.ask__question__title {
+	display: flex;
+	align-items: center;
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 32px;
+	color: #333333;
+}
+
 .ask__question {
 	width: 576px;
 	margin: 0 auto;
+}
+
+.ask__question__form-field {
+	margin-bottom: 2rem;
+}
+
+.ask__question__form-button {
+	display: flex;
+	justify-content: flex-end;
 }

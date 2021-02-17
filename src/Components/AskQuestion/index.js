@@ -49,8 +49,15 @@ const AskQuestion = () => {
 				</div>
 			</header>
 			<form className='ask__question__form'>
-				<TextInput {...formState.title} onChange={onInputChange} isMultiLine />
-				<TextInput {...formState.publication} onChange={onInputChange} />
+				<div className='ask__question__form-field'>
+					<TextInput {...formState.title} onChange={onInputChange} isMultiLine />
+				</div>
+				<div className='ask__question__form-field'>
+					<TextInput {...formState.publication} onChange={onInputChange} />
+				</div>
+				<div className='ask__question__form-button'>
+					<Button type='submit'>publicar</Button>
+				</div>
 			</form>
 		</section>
 	);
