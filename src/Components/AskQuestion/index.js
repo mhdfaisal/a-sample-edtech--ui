@@ -76,9 +76,9 @@ const AskQuestion = () => {
 			<header className='ask__question__header'>
 				<h2 className='ask__question__title'>Haz una pregunta</h2>
 				<div className='ask__question__cancel-btn'>
-					<span className='ask__question__cancel-btn-big'>
+					<div className='ask__question__cancel-btn-big'>
 						<Button onClick={onCancelBtnClick}>cancelar</Button>
-					</span>
+					</div>
 					<span className='ask__question__cancel-btn-small'>
 						<Link to='/'>
 							<img src={CloseIcon} alt='close-icon' />
