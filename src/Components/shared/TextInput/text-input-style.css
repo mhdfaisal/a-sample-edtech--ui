@@ -1,4 +1,5 @@
-.text__input__control {
+.text__input__control,
+.text__input__control-multiline {
 	font-family: 'Poppins', sans-serif;
 	font-style: normal;
 	font-weight: normal;
@@ -14,6 +15,12 @@
 	border-radius: 12px;
 	padding: 15px 15px 15px 16px;
 	outline: none;
+}
+
+.text__input__control-multiline {
+	height: 192px;
+	width: 100%;
+	resize: none;
 }
 
 .text__input__label-text {

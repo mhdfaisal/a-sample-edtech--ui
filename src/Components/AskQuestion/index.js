@@ -13,6 +13,7 @@ const AskQuestion = () => {
 		label: 'Título de publicación',
 		placeholder: 'Escribe tu título aquí',
 	});
+
 	const history = useHistory();
 
 	const onCancelBtnClick = () => {
@@ -27,6 +28,7 @@ const AskQuestion = () => {
 				</div>
 			</header>
 			<form className='ask__question__form'>
+				<TextInput {...inputState} onChange={onInputChange} isMultiLine />
 				<TextInput {...inputState} onChange={onInputChange} />
 			</form>
 		</section>
