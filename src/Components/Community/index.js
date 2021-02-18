@@ -11,7 +11,6 @@ import './community-section.css';
 import CommunityHeader from './CommunityHeader';
 import RoundedIconBtn from '../shared/RoundedIconBtn';
 import PenImage from '../../assets/images/ic_home_32.png';
-import SideBar from '../shared/Sidebar';
 
 const RouterLink = <Link to='/' />;
 
@@ -20,7 +19,6 @@ const Community = () => {
 	const history = useHistory();
 	return (
 		<>
-			<SideBar />
 			<section className='community__section'>
 				<CommunityHeader />
 				<Tabs value={locationObj?.pathname}>

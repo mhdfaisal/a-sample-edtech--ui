@@ -8,6 +8,7 @@ import PageNotFound from './PageNotFound';
 import useLocalStorage from '../hooks/useLocalStorage';
 import { DUMMY_API_BASE_URL } from '../utils/api-constants';
 import { AppContext } from '../Components/Context/AppContext';
+import Layout from './shared/Layout';
 
 const App = () => {
 	const [storedItem, setValueInLS] = useLocalStorage('lucaQuestions');
@@ -49,17 +50,19 @@ const App = () => {
 				errorMsg,
 			}}
 		>
-			<Switch>
-				<Route path='/ask' exact>
-					<AskQuestion />
-				</Route>
-				<Route path='/notfound' exact>
-					<PageNotFound />
-				</Route>
-				<Route path='/'>
-					<Community />
-				</Route>
-			</Switch>
+			<Layout>
+				<Switch>
+					<Route path='/ask' exact>
+						<AskQuestion />
+					</Route>
+					<Route path='/notfound' exact>
+						<PageNotFound />
+					</Route>
+					<Route path='/'>
+						<Community />
+					</Route>
+				</Switch>
+			</Layout>
 		</AppContext.Provider>
 	);
 };

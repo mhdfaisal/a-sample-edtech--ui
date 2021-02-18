@@ -13,19 +13,22 @@ import './sidebar-styles.css';
 
 const SideBar = () => {
 	return (
-		<aside className='sidebar__container'>
-			<div className='sidebar__logo'>
-				<img src={Logo} alt='lucas-logo' />
-			</div>
-			<nav className='sidebar__links'>
-				<NavItem to={'/'} text='Inicio' icon={HomeLogo} />
-				<NavItem to={'/'} text='Mis cursos' icon={VideoLogo} />
-				<NavItem to={'/'} text='Quizzes' icon={QuizLogo} />
-				<NavItem to={'/'} text='Mi plan de estudios' icon={StudyPlanLogo} />
-				<NavItem to={'/'} isActive text='Comunidad' icon={CommunityLogo} />
-				<NavItem to={'/'} text='Centro de ayuda' icon={HelpIcon} />
-			</nav>
-		</aside>
+		<>
+			<aside className='sidebar__container'>
+				<div className='sidebar__logo'>
+					<img src={Logo} alt='lucas-logo' />
+				</div>
+				<nav className='sidebar__links'>
+					<NavItem to={'/'} text='Inicio' icon={HomeLogo} />
+					<NavItem to={'/'} text='Mis cursos' icon={VideoLogo} />
+					<NavItem to={'/'} text='Quizzes' icon={QuizLogo} />
+					<NavItem to={'/'} text='Mi plan de estudios' icon={StudyPlanLogo} />
+					<NavItem to={'/'} isActive text='Comunidad' icon={CommunityLogo} />
+					<NavItem to={'/'} text='Centro de ayuda' icon={HelpIcon} />
+				</nav>
+			</aside>
+			<aside className='sidebar__spacer'></aside>
+		</>
 	);
 };
 

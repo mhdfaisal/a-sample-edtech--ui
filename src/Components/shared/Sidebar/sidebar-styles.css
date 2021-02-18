@@ -5,6 +5,17 @@
 	background: #fff;
 	flex-direction: column;
 	overflow-y: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.sidebar__spacer {
+	min-width: 288px;
+	display: block;
+	min-height: 100vh;
+	background: #fff;
 }
 
 .sidebar__container .sidebar__logo {
