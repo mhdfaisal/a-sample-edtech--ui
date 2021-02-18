@@ -1,5 +1,7 @@
 # Luca Front End Test Task -
 
+Application Live Demo URL - https://sharp-sinoussi-a35496.netlify.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## How to run locally in development mode -
@@ -10,7 +12,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How to create a build -
 
-Refer to [Create React App](https://github.com/facebook/create-react-app).
+`npm run build`
+For more info refer to [Create React App](https://github.com/facebook/create-react-app).
 
 ## Backend -
 
