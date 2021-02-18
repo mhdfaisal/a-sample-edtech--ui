@@ -1,0 +1,67 @@
+.top__bar {
+	display: flex;
+	width: 100%;
+	background: #f1f2f8;
+	height: 80px;
+	padding: 21px 48px 23px 48px;
+}
+
+.top__bar__explorer,
+.top__bar__trending,
+.top__bar__user-area {
+	display: flex;
+}
+
+.top__bar__explorer .top__bar__explorer-btn {
+	margin-right: 2rem;
+}
+
+.top__bar__explorer .top__bar__search-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.top__bar__trending {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.top__bar__trending .top__bar__fire,
+.top__bar__trending .top__bar__police,
+.top__bar__trending .top__bar__florist {
+	display: flex;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 24px;
+	color: #d9dae3;
+	margin-right: 32px;
+}
+
+.top__bar__trending .top__bar__trending-count {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.top__bar__trending .fire-icon,
+.top__bar__trending .florist-icon,
+.top__bar__trending .police-icon {
+	display: flex;
+	margin-right: 4px;
+}
+
+.top__bar__user-area .notification__icon {
+	display: flex;
+	margin-right: 32px;
+}
+
+.top__bar__user-area .notification__icon,
+.top__bar__user-area .user__icon {
+	height: 32px;
+	width: 32px;
+}
