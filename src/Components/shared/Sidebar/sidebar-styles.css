@@ -1,0 +1,24 @@
+.sidebar__container {
+	width: 288px;
+	display: block;
+	min-height: 100vh;
+	background: #fff;
+	flex-direction: column;
+	overflow-y: auto;
+}
+
+.sidebar__container .sidebar__logo {
+	height: 80px;
+	width: 100%;
+	padding: 24px 24px 23.84px 24px;
+}
+
+.sidebar__container .sidebar__logo img {
+	height: 32.16px;
+}
+
+.sidebar__container .sidebar__links {
+	padding: 44px 24px 44px 24px;
+	display: flex;
+	flex-direction: column;
+}
