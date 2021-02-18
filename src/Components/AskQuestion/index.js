@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useLayoutEffect } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 
 import Button from '../shared/Button';
@@ -6,11 +6,14 @@ import TextInput from '../shared/TextInput';
 import useFormHook from '../../hooks/useFormHook';
 import { AppContext } from '../Context/AppContext';
 import CloseIcon from '../../assets/images/ic_close_32.png';
+import { LayoutContext } from '../Context/LayoutContext';
 
 import './ask-question-style.css';
 
 const AskQuestion = () => {
 	const { storedItem, setValueInLS } = useContext(AppContext);
+	const { showLayoutComponents, setShowLayoutComponent } = useContext(LayoutContext);
+
 	const { formState, onInputChange } = useFormHook({
 		inputs: {
 			title: {
@@ -71,6 +74,17 @@ const AskQuestion = () => {
 			history.push('/');
 		}
 	};
+
+	useLayoutEffect(() => {
+		if (window) {
+			if (window.innerWidth < 768 && showLayoutComponents?.showTopBar) {
+				setShowLayoutComponent({ ...showLayoutComponents, showTopBar: false });
+			} else if (window.innerWidth > 767 && !showLayoutComponents?.showTopBar) {
+				setShowLayoutComponent({ ...showLayoutComponents, showTopBar: true });
+			}
+		}
+	});
+
 	return (
 		<section className='ask__question'>
 			<header className='ask__question__header'>
