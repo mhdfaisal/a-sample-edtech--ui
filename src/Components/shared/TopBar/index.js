@@ -7,6 +7,7 @@ import PoliceIcon from '../../../assets/images/local_police-24px 1.png';
 import FloristIcon from '../../../assets/images/local_florist-24px 1.png';
 import NotificationIcon from '../../../assets/images/ic_notification_32.png';
 import User from '../../../assets/images/user.png';
+import LogoSmall from '../../../assets/images/luca_logo_color_sm.png';
 
 import './top-bar-styles.css';
 
@@ -19,6 +20,9 @@ const TopBar = () => {
 				</div>
 				<div className='top__bar__search-icon'>
 					<img src={SearchIcon} alt='search-icon' />
+				</div>
+				<div className='top__bar__logo__sm'>
+					<img src={LogoSmall} alt='luca-logo' />
 				</div>
 			</div>
 			<div className='top__bar__trending'>

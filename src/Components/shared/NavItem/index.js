@@ -10,6 +10,7 @@ const NavItem = ({ to = '/', icon = false, isActive, text = false, ...rest }) =>
 				to={to}
 				{...rest}
 				className={`nav__item__link ${isActive ? 'nav__item__link--active' : ''}`}
+				onClick={(e) => e.preventDefault()}
 			>
 				{icon && <img src={icon} alt='nav-icon' className='nav__item__image' />}
 				{text && <span className='nav__item__text'>{text}</span>}

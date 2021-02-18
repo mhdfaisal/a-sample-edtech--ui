@@ -1,8 +1,9 @@
 .rounded__icon__btn {
+	position: fixed;
 	width: 56px;
 	height: 56px;
-	left: 342px;
-	top: 710px;
+	right: 16px;
+	bottom: 150px;
 	background: #3843d0;
 	box-shadow: 0px 2px 0px #212b80;
 	border-radius: 100px;

@@ -18,6 +18,10 @@
 }
 
 @media screen and (max-width: 767px) {
+	.community__header {
+		margin-bottom: 2rem;
+		margin-top: 2rem;
+	}
 	.community__header__btn {
 		display: none;
 	}

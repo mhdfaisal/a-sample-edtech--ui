@@ -51,7 +51,7 @@
 @media screen and (max-width: 767px) {
 	.ask__question {
 		width: 100%;
-		padding: 1rem;
+		padding: 16px 16px 130px 16px;
 	}
 
 	.ask__question__header {

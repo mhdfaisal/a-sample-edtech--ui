@@ -65,3 +65,42 @@
 	height: 32px;
 	width: 32px;
 }
+
+.top__bar__explorer .top__bar__logo__sm img {
+	width: 100.5px;
+	height: 32px;
+}
+
+.top__bar__explorer .top__bar__logo__sm {
+	display: none;
+}
+
+@media screen and (max-width: 767px) {
+	.top__bar {
+		background: #ffffff;
+		box-shadow: 0px 1px 0px rgba(38, 38, 38, 0.08);
+		padding: 16.36px 16px 16.43px 16px;
+	}
+
+	.top__bar__trending,
+	.top__bar__explorer-btn,
+	.top__bar__search-icon {
+		display: none !important;
+	}
+
+	.top__bar__explorer {
+		flex: 1;
+		align-items: center;
+	}
+
+	.top__bar__explorer .top__bar__logo__sm {
+		display: flex;
+	}
+	.top__bar__explorer .top__bar__explorer-btn {
+		margin-right: 1rem;
+	}
+	.top__bar__user-area {
+		display: flex;
+		align-items: flex-end;
+	}
+}

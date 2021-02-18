@@ -11,7 +11,7 @@ import './community-section.css';
 import CommunityHeader from './CommunityHeader';
 import RoundedIconBtn from '../shared/RoundedIconBtn';
 import PenImage from '../../assets/images/ic_home_32.png';
-import TopBar from '../shared/TopBar';
+
 const RouterLink = <Link to='/' />;
 
 const Community = () => {
