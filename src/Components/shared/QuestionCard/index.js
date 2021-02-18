@@ -12,18 +12,7 @@ import stringHelpers from '../../../utils/string-helpers';
 import './style.css';
 
 const QuestionCard = ({ questionItem }) => {
-	const {
-		name,
-		question,
-		comments_count,
-		description,
-		disliked,
-		favorite,
-		id,
-		liked,
-		thread,
-		group,
-	} = questionItem;
+	const { name, question, comments_count, description, favorite, thread, group } = questionItem;
 	return (
 		<div className='question__card'>
 			<div className='question__card__content'>
