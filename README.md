@@ -13,7 +13,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Demo Video
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/a4575a012f22426a80b7d9ea47fe8e8d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+[Demo video link](https://www.loom.com/embed/a4575a012f22426a80b7d9ea47fe8e8d)
 
 ## How to run locally in development mode -
 
