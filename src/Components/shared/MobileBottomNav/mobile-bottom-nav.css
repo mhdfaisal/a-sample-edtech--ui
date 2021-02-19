@@ -2,7 +2,7 @@
 	flex-direction: column;
 	background: #ffffff;
 	box-shadow: 0px -1px 0px rgba(38, 38, 38, 0.25);
-	height: 106px;
+	/* height: 106px; */
 	user-select: none;
 	position: fixed;
 	bottom: 0;
@@ -10,18 +10,17 @@
 	width: 100%;
 	z-index: 3;
 	display: none;
+	overflow-x: scroll;
 }
 
 .mobile__bottom__nav-links {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
-	justify-content: center;
-	width: 100%;
+	margin: 0 auto;
+	width: auto;
 	height: 100%;
 	align-self: stretch;
-	padding: 20px 38px 47px 38px;
-	overflow-x: auto;
-	overflow-y: hidden;
+	padding: 20px 38px 20px 38px;
 }
 
 .mobile__bottom__nav-links .nav__item,
@@ -53,7 +52,7 @@
 	width: 76px;
 	height: 4px;
 	left: -24px;
-	top: -24px;
+	top: -20.5px;
 	background: #3843d0;
 	position: absolute;
 }
