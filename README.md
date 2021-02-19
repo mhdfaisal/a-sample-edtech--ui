@@ -4,6 +4,17 @@ Application Live Demo URL - https://sharp-sinoussi-a35496.netlify.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Features Shipped
+
+-   [x] Load data from DUMMY endpoint and save it in local storage.
+-   [x] Create new questions and save them along with the dummy questions in local storage.
+-   [x] Allow user to mark and mark a question as favorite :star:
+-   [x] Designed for both the Desktop and Mobile devices
+
+## Demo Video
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/a4575a012f22426a80b7d9ea47fe8e8d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 ## How to run locally in development mode -
 
 1. Run command `npm install` to install the dependencies.
