@@ -11,8 +11,17 @@ import stringHelpers from '../../../utils/string-helpers';
 
 import './style.css';
 
-const QuestionCard = ({ questionItem }) => {
-	const { name, question, comments_count, description, favorite, thread, group } = questionItem;
+const QuestionCard = ({ questionItem, onFavoriteBtnClick }) => {
+	const {
+		id,
+		name,
+		question,
+		comments_count,
+		description,
+		favorite,
+		thread,
+		group,
+	} = questionItem;
 	return (
 		<div className='question__card'>
 			<div className='question__card__content'>
@@ -67,6 +76,10 @@ const QuestionCard = ({ questionItem }) => {
 						src={favorite ? StarRated : StarNonRated}
 						alt='favorite'
 						className='question__card__favorite'
+						onClick={(e) => {
+							e.preventDefault();
+							onFavoriteBtnClick(id);
+						}}
 					/>
 				</div>
 			</div>

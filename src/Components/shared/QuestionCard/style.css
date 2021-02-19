@@ -91,6 +91,15 @@
 	width: 1.5rem;
 }
 
+.question__card__footer .question__card__favorite {
+	cursor: pointer;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+
 .question__card__footer .question__card__posted-by {
 	display: flex;
 	align-items: flex-start;
