@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import axios from 'axios';
+import Joyride from 'react-joyride';
 
 import AskQuestion from './AskQuestion';
 import Community from './Community';
@@ -9,6 +10,7 @@ import useLocalStorage from '../hooks/useLocalStorage';
 import { DUMMY_API_BASE_URL } from '../utils/api-constants';
 import { AppContext } from '../Components/Context/AppContext';
 import Layout from './shared/Layout';
+import { STEPS } from '../utils/joyride-steps';
 
 const App = () => {
 	const [storedItem, setValueInLS] = useLocalStorage('lucaQuestions');
@@ -50,6 +52,7 @@ const App = () => {
 				errorMsg,
 			}}
 		>
+			<Joyride steps={STEPS} />
 			<Layout>
 				<Switch>
 					<Route path='/ask' exact>
