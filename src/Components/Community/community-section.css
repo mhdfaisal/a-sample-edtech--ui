@@ -12,10 +12,15 @@
 	z-index: 1;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 972px) {
+	.community__section {
+		padding: 0 16px 130px 16px;
+	}
+}
+
+@media screen and (max-width: 768px) {
 	.community__section {
 		width: 100%;
-		padding: 0 16px 106px 16px;
 		background: #fff;
 	}
 	.community__section__float-btn {

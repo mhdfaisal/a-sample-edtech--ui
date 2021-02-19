@@ -48,10 +48,15 @@
 	display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 972px) {
+	.ask__question {
+		padding: 16px 16px 135px 16px;
+	}
+}
+
+@media screen and (max-width: 768px) {
 	.ask__question {
 		width: 100%;
-		padding: 16px 16px 130px 16px;
 	}
 
 	.ask__question__header {

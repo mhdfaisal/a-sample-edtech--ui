@@ -77,9 +77,9 @@ const AskQuestion = () => {
 
 	useLayoutEffect(() => {
 		if (window) {
-			if (window.innerWidth < 768 && showLayoutComponents?.showTopBar) {
+			if (window.innerWidth <= 768 && showLayoutComponents?.showTopBar) {
 				setShowLayoutComponent({ ...showLayoutComponents, showTopBar: false });
-			} else if (window.innerWidth > 767 && !showLayoutComponents?.showTopBar) {
+			} else if (window.innerWidth > 768 && !showLayoutComponents?.showTopBar) {
 				setShowLayoutComponent({ ...showLayoutComponents, showTopBar: true });
 			}
 		}

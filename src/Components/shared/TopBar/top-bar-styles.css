@@ -75,7 +75,7 @@
 	display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 	.top__bar {
 		background: #ffffff;
 		box-shadow: 0px 1px 0px rgba(38, 38, 38, 0.08);

@@ -121,7 +121,7 @@
 	margin-right: 16px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 	.question__card__avatar,
 	.question__card__avatar .sb-avatar {
 		height: 64px;
