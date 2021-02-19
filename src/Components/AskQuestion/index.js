@@ -1,4 +1,4 @@
-import React, { useContext, useLayoutEffect } from 'react';
+import React, { useContext, useLayoutEffect, useEffect } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 
 import Button from '../shared/Button';
@@ -84,6 +84,14 @@ const AskQuestion = () => {
 			}
 		}
 	});
+
+	// on un-mount
+
+	useEffect(() => {
+		return () => {
+			setShowLayoutComponent({ ...showLayoutComponents, showTopBar: true });
+		};
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return (
 		<section className='ask__question'>
