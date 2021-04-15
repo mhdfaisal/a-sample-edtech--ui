@@ -1,4 +1,4 @@
-# Luca Front End Test Task -
+# A Sample UI Task -
 
 Application Live Demo URL - https://sharp-sinoussi-a35496.netlify.app/
 
